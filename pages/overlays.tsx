@@ -6,9 +6,9 @@ export default function Overlays() {
     <>
       <Metadata title={"Foxylib"} />
       <DefaultLayout>
-        <div className="flex h-full w-full items-center justify-center bg-gray-50">
-          <h1 className="text-4xl font-bold">Overlays !</h1>
-        </div>
+        <h1 className="mb-10 border-b-4 border-primary pr-6 pb-6 text-4xl font-bold capitalize">
+          Overlays !
+        </h1>
       </DefaultLayout>
     </>
   );

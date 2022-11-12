@@ -20,8 +20,9 @@
       "@components/*": ["components/*"],
       "@public/*": ["public/*"],
       "@data/*": ["data/*"],
+      "@hooks/*": ["hooks/*"],
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "hooks/useTranslation.ts"],
   "exclude": ["node_modules"]
 }
