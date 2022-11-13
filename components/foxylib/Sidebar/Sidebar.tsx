@@ -1,15 +1,6 @@
-import {
-  CalendarIcon,
-  ChartBarIcon,
-  FolderIcon,
-  HomeIcon,
-  InboxIcon,
-  UsersIcon,
-} from "@heroicons/react/24/outline";
 import ctl from "@netlify/classnames-template-literals";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { useState } from "react";
 
 export interface SidebarProps {
   data: {

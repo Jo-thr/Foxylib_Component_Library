@@ -14,3 +14,21 @@ body {
 * {
   box-sizing: border-box;
 }
+
+pre {
+  @apply flex h-full w-full flex-col bg-gray-800 px-6 py-8;
+  counter-reset: line;
+}
+code {
+  @apply text-white;
+  counter-increment: line;
+}
+code:before {
+  content: counter(line);
+  display: inline-block;
+  border-right: 1px solid #ddd;
+  padding: 0 0.5em;
+  margin-right: 0.5em;
+  color: #888;
+  -webkit-user-select: none;
+}

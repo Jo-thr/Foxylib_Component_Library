@@ -1,5 +1,5 @@
 import { Sidebar } from "@components/foxylib/Sidebar/Sidebar";
-import SwitchLang from "@components/foxylib/Sidebar/SwitchLang";
+import SwitchLang from "@components/foxylib/SwitchLang/switchLang";
 import useTranslation from "@hooks/useTranslation";
 import Image from "next/image";
 import Link from "next/link";
