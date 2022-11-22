@@ -33,12 +33,12 @@ export const DefaultLayout = ({ children }: DefaultLayoutProps) => {
               height={"24"}
             />
           </a>
-          <SwitchLang />
+          {/* <SwitchLang /> */}
         </div>
       </div>
       <div className="flex h-full w-full flex-row pt-16">
         <Sidebar data={data.navigation} />
-        <div className="flex w-full flex-col items-start justify-start bg-gray-50 px-40 py-24">
+        <div className="flex w-full max-w-full flex-col items-start justify-center bg-gray-50 px-40">
           {children}
         </div>
       </div>

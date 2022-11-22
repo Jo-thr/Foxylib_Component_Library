@@ -1,24 +1,26 @@
+//@ts-nocheck
+import { TabsSection } from "@components/foxylib/Tabs/tabs";
 import { DefaultLayout } from "@components/layout/DefaultLayout";
+import useTranslation from "@hooks/useTranslation";
 import { Metadata } from "helpers/Metadata";
 import { useRouter } from "next/router";
 
-export default function Navigation() {
+export default function Overlays() {
   const slug = useRouter().query.slug;
+
+  const data = useTranslation().data.elements.filter((element) =>
+    element.name.toLowerCase().includes(slug)
+  );
+
   return (
     <>
       <Metadata title={"Foxylib"} />
       <DefaultLayout>
         <h1 className="mb-10 border-b-4 border-primary pr-6 pb-6 text-4xl font-bold capitalize">
-          {slug}
+          {data[0]?.name}
         </h1>
-        <p className="mb-14 w-full">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-          <br />
-          Dignissimos earum expedita sunt, reprehenderit eveniet ut asperiores
-          ratione repellat ipsam nobis sint minima nostrum ? <br />
-          Quos eos, veniam odio excepturi porro ex.
-        </p>
-        <div className="h-[50vh] w-full rounded-lg border bg-white p-6"></div>
+        <p className="mb-14 w-full">{data[0]?.description}</p>
+        <TabsSection data={data} slug={slug} />
       </DefaultLayout>
     </>
   );

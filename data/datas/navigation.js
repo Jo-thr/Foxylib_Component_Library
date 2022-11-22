@@ -27,6 +27,13 @@ const navigation = [
             {id: 6, name: 'Toggle', path:'/forms/toggle'},
         ]
     },{
+        id : 7,
+        name: 'Hooks',
+        path: '/hooks',
+        subpages:[
+            {id: 1, name: 'Translation', path:'/hooks/translation'},
+        ]
+    },{
         id : 4,
         name: 'Layout',
         path: '/layout',

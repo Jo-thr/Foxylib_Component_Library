@@ -5,11 +5,11 @@ import useTranslation from "@hooks/useTranslation";
 import { Metadata } from "helpers/Metadata";
 import { useRouter } from "next/router";
 
-export default function Layout() {
+export default function Hooks() {
   const slug = useRouter().query.slug;
 
-  const data = useTranslation().data.elements.filter((element) =>
-    element.name.toLowerCase().includes(slug)
+  const data = useTranslation().data.hooks.filter((item) =>
+    item.name.toLowerCase().includes(slug)
   );
 
   return (
