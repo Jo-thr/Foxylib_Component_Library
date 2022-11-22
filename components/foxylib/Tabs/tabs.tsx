@@ -51,22 +51,22 @@ export const TabsSection = ({ data, slug }: TabProps) => {
             </Tab.Panel>
             {/* CODE CONTENT */}
             <Tab.Panel>
-              <div className="relative h-[50vh] w-full !max-w-full overflow-hidden rounded-lg">
-                <pre className="relative flex h-full w-full !max-w-full flex-col !overflow-scroll bg-gray-800 px-6 py-8 text-sm text-gray-200 ">
-                  <div className="absolute top-0 -mx-6  flex w-full flex-row items-center justify-between bg-gray-800 p-6">
-                    <h4 className="text-sm font-normal text-primary">
-                      {dataSelected[0]?.path}
-                    </h4>
-                    <button
-                      onClick={() =>
-                        navigator.clipboard.writeText(dataSelected[0]?.code)
-                      }
-                    >
-                      <DocumentCheckIcon className="relative h-5 w-5" />
-                    </button>
-                  </div>
+              <div className="relative h-[50vh] w-full !max-w-full overflow-hidden rounded-lg  bg-gray-800 px-6 py-8 text-sm text-gray-200">
+                <div className="absolute top-0 -mx-6  flex w-full flex-row items-center justify-between bg-gray-800 p-6">
+                  <h4 className="text-sm font-normal text-primary">
+                    {dataSelected[0]?.path}
+                  </h4>
+                  <button
+                    onClick={() =>
+                      navigator.clipboard.writeText(dataSelected[0]?.code)
+                    }
+                  >
+                    <DocumentCheckIcon className="relative h-5 w-5" />
+                  </button>
+                </div>
 
-                  <div className="mt-10 " />
+                <div className="mt-10 " />
+                <pre className="overflow-auto whitespace-pre-wrap ">
                   <code>{dataSelected[0]?.code}</code>
                 </pre>
               </div>
