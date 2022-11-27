@@ -16,11 +16,15 @@ export default function Hooks() {
     <>
       <Metadata title={"Foxylib"} />
       <DefaultLayout>
-        <h1 className="mb-10 border-b-4 border-secondary pr-6 pb-6 text-4xl font-bold capitalize">
+        <h1 className="mb-6 border-b-2  border-secondary pr-6 pb-4 text-3xl font-bold capitalize">
           {data[0]?.name}
         </h1>
-        <p className="mb-14 w-full">{data[0]?.description}</p>
-        <TabsSection data={data} slug={slug} />
+        <p className="mb-14 w-full text-sm">{data[0]?.description}</p>
+        <div className="grid w-full gap-16">
+          {data[0]?.codes.map((item, index) => (
+            <TabsSection key={index} data={data} item={item} />
+          ))}
+        </div>
       </DefaultLayout>
     </>
   );

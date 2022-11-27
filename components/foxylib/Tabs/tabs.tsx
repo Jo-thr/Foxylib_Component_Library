@@ -4,7 +4,6 @@ import { Tab } from "@headlessui/react";
 import ctl from "@netlify/classnames-template-literals";
 import React from "react";
 import { DocumentCheckIcon, DocumentIcon } from "@heroicons/react/24/outline";
-import { CopyIcon } from "../CopyIcon/CopyIcon";
 
 export interface TabProps {
   data: Array<Record<string, any>>;
@@ -17,7 +16,7 @@ export const TabsSection = ({ data, item }: TabProps) => {
   const [activeTab, setActiveTab] = useState(Tabs[0].name);
   const [clicked, setClicked] = useState(false);
 
-  const delay = 5;
+  const delay = 3;
   const handleClicked = () => {
     navigator.clipboard.writeText(item.code);
     setClicked(true);
