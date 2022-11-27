@@ -12,7 +12,6 @@ export interface DefaultLayoutProps {
 export const DefaultLayout = ({ children }: DefaultLayoutProps) => {
   const data = useTranslation().data;
 
-  console.log(data);
   return (
     <div className="h-screen min-h-screen overflow-hidden">
       <div className="absolute top-0 z-10 flex w-full flex-row items-center justify-between border-b bg-white py-4 px-8">
@@ -38,7 +37,7 @@ export const DefaultLayout = ({ children }: DefaultLayoutProps) => {
       </div>
       <div className="flex h-full w-full flex-row pt-16">
         <Sidebar data={data.navigation} />
-        <div className="flex w-full max-w-full flex-col items-start justify-center bg-gray-50 px-40">
+        <div className="flex w-full max-w-full flex-col items-start justify-start overflow-y-scroll bg-gray-50 px-32 py-14">
           {children}
         </div>
       </div>

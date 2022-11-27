@@ -19,28 +19,28 @@ export const Sidebar = ({ data }: SidebarProps) => {
       <div className="mt-5 flex flex-grow flex-col">
         <nav className="flex flex-col gap-1 bg-white" aria-label="Sidebar">
           {data.map((item) => (
-            <div key={item.id} className={"px-4"}>
+            <div key={item.id} className={"px-2"}>
               <div
                 className={ctl(`flex flex-col items-start border-l-4 border-transparent text-sm font-medium
                 ${
                   router.asPath.includes(item.path) &&
-                  "rounded-lg bg-orange-200"
+                  "rounded-lg bg-secondary text-white"
                 }
                 `)}
               >
-                <Link href={item.path} className="flex w-full py-3 px-5">
+                <Link href={item.path} className="flex w-full py-2 px-3">
                   <span>{item.name}</span>
                 </Link>
               </div>
               {item.id === 1 && <div className="mt-3 mb-2 h-px bg-gray-200" />}
               {item.subpages && router.asPath.includes(item.path) && (
-                <div className="mx-3 mb-2 flex flex-col gap-2 border-l-4 border-orange-200 py-4 ">
+                <div className="mx-3 mb-2 flex flex-col gap-2 border-l-4 border-gray-200 py-4 ">
                   {item.subpages?.map((sub) => (
                     <Link
                       key={sub.id}
                       href={sub.path}
-                      className={ctl(`-ml-px p-2 text-sm font-medium
-                  ${router.asPath === sub.path && "rounded-r-lg  bg-orange-100"}
+                      className={ctl(`-ml-1 border-l-4 p-2 text-sm font-medium
+                  ${router.asPath === sub.path && "border-l-4 border-secondary"}
                   `)}
                     >
                       {sub.name}

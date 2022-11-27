@@ -6,10 +6,14 @@ const elementsEN = [
         id:1, 
         name : 'Avatar', 
         description : 'Dignissimos earum expedita sunt, reprehenderit eveniet ut asperiores ratione repellat ipsam nobis sint minima nostrum ?  Quos eos, veniam odio excepturi porro ex.' ,
-        preview: <Avatar />,
+        
         tabs: true,
-        path: '@components/elements/avatar.tsx',
-        code:`import Image from "next/image";
+        codes: [
+          {
+            id: 1,
+            preview: <Avatar form='circle' />,
+            title: 'Circular avatars',
+            code:`import Image from "next/image";
 import defaultPlaceholder from "@assets/images/default-placeholder.png";
 
 export const Avatar = () => {
@@ -18,8 +22,39 @@ export const Avatar = () => {
       <Image src={defaultPlaceholder} alt="Nom de l'image" />
     </div>
   );
-};
-        `
+};`
+          },
+          {
+            id: 2,
+            preview: <Avatar form='rounded' />,
+            title: 'Rounded avatars',
+            code:`import Image from "next/image";
+import defaultPlaceholder from "@assets/images/default-placeholder.png";
+
+export const Avatar = () => {
+  return (
+    <div className="h-20 w-20 overflow-hidden rounded-xl">
+      <Image src={defaultPlaceholder} alt="Nom de l'image" />
+    </div>
+  );
+};`
+          },
+          {
+            id: 3,
+            preview: <Avatar form='square' />,
+            title: 'Square avatars',
+            code:`import Image from "next/image";
+import defaultPlaceholder from "@assets/images/default-placeholder.png";
+
+export const Avatar = () => {
+  return (
+    <div className="h-20 w-20 overflow-hidden rounded-none">
+      <Image src={defaultPlaceholder} alt="Nom de l'image" />
+    </div>
+  );
+};`
+          }
+        ]
         
     },
     {
