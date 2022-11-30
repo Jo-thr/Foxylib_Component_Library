@@ -8,7 +8,7 @@ import { useRouter } from "next/router";
 export default function Navigation() {
   const slug = useRouter().query.slug;
 
-  const data = useTranslation().data.elements.filter((element) =>
+  const data = useTranslation().data.nav.filter((element) =>
     element.name.toLowerCase().includes(slug)
   );
 

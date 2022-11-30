@@ -1,13 +1,15 @@
-import navigationEN from "./datas/navigation";
-import fixedContentEN from "./datas/fixed-content";
-import elementsEN from "./datas/elements";
-import hooksEN from "./datas/hooks";
+import navigation from "./datas/navigation";
+import hooks from "./datas/hooks";
+import elements from "./datas/elements";
+import fixedContent from "./datas/fixed-content";
+import nav from "./datas/nav";
 
 const datas = {
-  navigation: navigationEN,
-  fixedContent: fixedContentEN,
-  elements: elementsEN,
-  hooks: hooksEN,
+  navigation: navigation,
+  fixedContent: fixedContent,
+  elements: elements,
+  nav: nav,
+  hooks: hooks,
 };
 
 export default datas;

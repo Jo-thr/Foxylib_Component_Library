@@ -1,6 +1,3 @@
-import Image from "next/image";
-import defaultPlaceholder from "@assets/images/default-placeholder.png";
-import ctl from "@netlify/classnames-template-literals";
 import {
   ArchiveBoxIcon,
   ArrowRightCircleIcon,
@@ -12,12 +9,14 @@ import {
   PowerIcon,
 } from "@heroicons/react/24/outline";
 import { useState } from "react";
+import Link from "next/link";
+import cn from "clsx";
 
 export type DropdownProps = {
   heading?: boolean;
   divider?: boolean;
   icon?: boolean;
-  aspect?: "normal" | "minimal";
+  aspect?: "basic" | "minimal";
   children: string;
 };
 
@@ -26,7 +25,7 @@ export const Dropdown = ({
   heading = false,
   divider = false,
   icon = false,
-  aspect = "normal",
+  aspect = "basic",
 }: DropdownProps) => {
   const [clicked, setClicked] = useState(false);
   console.log(clicked);
@@ -36,36 +35,43 @@ export const Dropdown = ({
       id: 1,
       icon: <PencilSquareIcon className="mr-2 h-4 w-4" />,
       name: "Edit",
+      path: "#",
     },
     {
       id: 1,
       icon: <DocumentDuplicateIcon className="mr-2 h-4 w-4" />,
       name: "Duplicate",
+      path: "#",
     },
     {
       id: 1,
       icon: <ArchiveBoxIcon className="mr-2 h-4 w-4" />,
       name: "Archive",
+      path: "#",
     },
     {
       id: 1,
       icon: <ArrowRightCircleIcon className="mr-2 h-4 w-4" />,
       name: "Move",
+      path: "#",
     },
     {
       id: 1,
       icon: <HeartIcon className="mr-2 h-4 w-4" />,
       name: "Add to favorite",
+      path: "#",
     },
     {
       id: 1,
       icon: <PencilSquareIcon className="mr-2 h-4 w-4" />,
       name: "Account settings",
+      path: "#",
     },
     {
       id: 1,
       icon: <PowerIcon className="mr-2 h-4 w-4" />,
       name: "Sign out",
+      path: "#",
     },
   ];
 
@@ -73,15 +79,15 @@ export const Dropdown = ({
     <div className="relative w-full">
       <button
         onClick={() => setClicked(!clicked)}
-        className={ctl(
+        className={cn(
           `relative top-0 inline-flex w-max items-center justify-center px-4 py-2 text-sm font-medium 
           ${
-            aspect === "normal" &&
+            aspect === "basic" &&
             "rounded-md bg-secondary bg-opacity-60 text-white hover:bg-opacity-90 "
           }`
         )}
       >
-        {aspect === "normal" && (
+        {aspect === "basic" && (
           <>
             {children}
             {clicked === false ? (
@@ -96,24 +102,33 @@ export const Dropdown = ({
         )}
       </button>
       <div
-        className={ctl(
-          `top-10 right-0 h-max w-60 origin-top-right rounded-xl border border-gray-50 bg-white py-3 px-2 shadow-lg transition duration-700 ease-in-out ${
+        className={cn(
+          `top-10 right-0 z-10 h-max w-60 origin-top-right rounded-xl border border-gray-50 bg-white py-3 px-2 shadow-lg transition duration-700 ease-in-out ${
             clicked === false ? "hidden" : "absolute"
           }`
         )}
       >
         <ul
-          className={ctl(
-            `flex w-full flex-col gap-1 ${divider && "divide-y "}`
-          )}
+          className={cn(`flex w-full flex-col gap-1 ${divider && "divide-y "}`)}
         >
-          {list.map((item) => (
+          {list.map((item, index) => (
             <li key={item.id} className="cursor-pointer ">
-              <div className="flex w-full items-center rounded-md  p-2 text-sm hover:bg-secondary hover:text-white">
+              {index === 0 && heading && (
+                <div className="flex flex-col px-2 py-3 pt-1 text-sm">
+                  Signed in as
+                  <span className="font-bold text-secondary">
+                    foxylib@contact.com
+                  </span>
+                </div>
+              )}
+              <Link
+                className="flex w-full items-center rounded-md  p-2 text-sm hover:bg-secondary hover:text-white"
+                href={item.path}
+              >
                 {icon === true && <>{item.icon}</>}
 
                 {item.name}
-              </div>
+              </Link>
             </li>
           ))}
         </ul>

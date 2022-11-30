@@ -1,7 +1,7 @@
 import useTranslation from "@hooks/useTranslation";
 import { useState } from "react";
 import { Tab } from "@headlessui/react";
-import ctl from "@netlify/classnames-template-literals";
+import cn from "clsx";
 import React from "react";
 import { DocumentCheckIcon, DocumentIcon } from "@heroicons/react/24/outline";
 
@@ -23,6 +23,8 @@ export const TabsSection = ({ data, item }: TabProps) => {
     setTimeout(() => setClicked(false), delay * 1000);
   };
 
+  console.log(item.code);
+
   return (
     <div className="w-full max-w-full ">
       {data[0]?.tabs ? (
@@ -41,7 +43,7 @@ export const TabsSection = ({ data, item }: TabProps) => {
                   <Tab
                     key={tab.id}
                     onClick={() => setActiveTab(tab.name)}
-                    className={ctl(
+                    className={cn(
                       `flex flex-row items-center px-4 py-2 text-xs text-gray-500 outline-none ${
                         tab.name === activeTab &&
                         "rounded-lg bg-secondary !text-white "
@@ -58,7 +60,7 @@ export const TabsSection = ({ data, item }: TabProps) => {
                 onClick={handleClicked}
               >
                 <div
-                  className={ctl(
+                  className={cn(
                     `mr-2 text-sm transition duration-500 ease-in-out ${
                       clicked === true ? "text-secondary" : "text-gray-900"
                     } `
@@ -87,8 +89,9 @@ export const TabsSection = ({ data, item }: TabProps) => {
             </Tab.Panel>
             {/* CODE CONTENT */}
             <Tab.Panel>
-              <div className="relative max-h-[50vh] w-full !max-w-full overflow-hidden rounded-lg  bg-gray-800 p-8 text-sm text-gray-200">
-                <pre className="overflow-auto whitespace-pre-wrap ">
+              <div className="relative max-h-[50vh] w-full !max-w-full overflow-y-scroll  rounded-lg  bg-gray-800 p-8 text-sm text-gray-200">
+                <pre className="whitespace-pre-wrap ">
+                  <code dangerouslySetInnerHTML={{ __html: item?.code }}></code>
                   <code>{item?.code}</code>
                 </pre>
               </div>

@@ -37,7 +37,7 @@ export const DefaultLayout = ({ children }: DefaultLayoutProps) => {
       </div>
       <div className="flex h-full w-full flex-row pt-16">
         <Sidebar data={data.navigation} />
-        <div className="flex w-full max-w-full flex-col items-start justify-start overflow-y-scroll bg-gray-50 px-32 py-14">
+        <div className="flex w-full max-w-full flex-col items-start justify-start overflow-y-scroll bg-gray-50 px-12 pt-14 pb-12 lg:px-32 lg:pb-24">
           {children}
         </div>
       </div>

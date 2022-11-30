@@ -2,7 +2,7 @@ import { FC } from "react";
 import { Fragment } from "react";
 import { Menu, Transition } from "@headlessui/react";
 import { useRouter } from "next/router";
-import ctl from "@netlify/classnames-template-literals";
+import cn from "clsx";
 import { ChevronDownIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 import FlagFR from "@assets/images/FR.png";
@@ -54,7 +54,7 @@ const SwitchLang: FC<ComponentProps> = ({ onClick, isValid }) => {
               <Menu.Item key={locale}>
                 <button
                   onClick={onChangeLanguage(locale)}
-                  className={ctl(`
+                  className={cn(`
                   group flex w-full items-center px-4 py-2 text-sm
                     ${
                       locale === router.locale

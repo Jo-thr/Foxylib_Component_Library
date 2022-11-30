@@ -2,7 +2,7 @@
 import datas from "@data/datas";
 import { useRouter } from "next/router";
 
-export default function useTranslation() {
+export default function Translations() {
   const router = useRouter();
   const { locale } = router;
 
