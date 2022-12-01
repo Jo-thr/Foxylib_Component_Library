@@ -4,7 +4,6 @@ import { Tab } from "@headlessui/react";
 import cn from "clsx";
 import React from "react";
 import { DocumentCheckIcon, DocumentIcon } from "@heroicons/react/24/outline";
-
 export interface TabProps {
   data: Array<Record<string, any>>;
   item: Record<string, any>;
@@ -91,8 +90,7 @@ export const TabsSection = ({ data, item }: TabProps) => {
             <Tab.Panel>
               <div className="relative max-h-[50vh] w-full !max-w-full overflow-y-scroll  rounded-lg  bg-gray-800 p-8 text-sm text-gray-200">
                 <pre className="whitespace-pre-wrap ">
-                  <code dangerouslySetInnerHTML={{ __html: item?.code }}></code>
-                  <code>{item?.code}</code>
+                  <code className={`language-tsx`}>{item?.code}</code>
                 </pre>
               </div>
             </Tab.Panel>

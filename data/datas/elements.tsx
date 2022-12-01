@@ -1,7 +1,9 @@
+//@ts-nocheck
 import { Avatar } from "@components/elements/Avatar/avatar";
 import { Badges } from "@components/elements/Badges/badges";
 import { Button } from "@components/elements/Button/button";
 import { Dropdown } from "@components/elements/Dropdown/dropdown";
+import AvatarText from "raw-loader!./elements/AvatarText.txt";
 
 const elements = [
   {
@@ -16,19 +18,20 @@ const elements = [
         id: 1,
         preview: <Avatar />,
         title: "Circular avatars",
-        code: <Avatar />,
+        code: AvatarText,
       },
       {
         id: 2,
         preview: <Avatar notif={true} />,
         title: "Avatars with notification",
-        code: ``,
+        // code: String(<Avatar />),
+        code: AvatarText,
       },
       {
         id: 3,
         preview: <Avatar group={true} />,
         title: "Avatars Group",
-        code: ``,
+        code: AvatarText,
       },
       {
         id: 4,
@@ -36,7 +39,7 @@ const elements = [
           <Avatar title={"Durant Jean"} subtitle={"Développeur Front"} />
         ),
         title: "Avatar with text",
-        code: ``,
+        code: AvatarText,
       },
     ],
   },
