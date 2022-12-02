@@ -20,6 +20,7 @@ export default function Forms() {
           {data[0]?.name}
         </h1>
         <p className="mb-14 w-full text-sm">{data[0]?.description}</p>
+        <button>{data[0].ctaName}</button>
         <div className="grid w-full gap-16">
           {data[0]?.codes.map((item, index) => (
             <TabsSection key={index} data={data} item={item} />

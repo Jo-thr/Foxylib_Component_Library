@@ -15,14 +15,12 @@ export const TabsSection = ({ data, item }: TabProps) => {
   const [activeTab, setActiveTab] = useState(Tabs[0].name);
   const [clicked, setClicked] = useState(false);
 
-  const delay = 3;
+  const delay = 5;
   const handleClicked = () => {
     navigator.clipboard.writeText(item.code);
     setClicked(true);
     setTimeout(() => setClicked(false), delay * 1000);
   };
-
-  console.log(item.code);
 
   return (
     <div className="w-full max-w-full ">

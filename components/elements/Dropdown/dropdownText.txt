@@ -28,6 +28,7 @@ export const Dropdown = ({
   aspect = "basic",
 }: DropdownProps) => {
   const [clicked, setClicked] = useState(false);
+  console.log(clicked);
 
   const list = [
     {

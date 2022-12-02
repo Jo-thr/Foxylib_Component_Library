@@ -16,7 +16,13 @@ export const DefaultLayout = ({ children }: DefaultLayoutProps) => {
     <div className="h-screen min-h-screen overflow-hidden">
       <div className="absolute top-0 z-10 flex w-full flex-row items-center justify-between border-b bg-white py-4 px-8">
         <Link className="flex flex-row items-center gap-4" href={"/"}>
-          <Image src={"/fox.png"} alt={"fox"} width={"34"} height={"34"} />
+          <Image
+            src={"/fox.png"}
+            alt={"fox"}
+            width={"34"}
+            height={"34"}
+            className="mix-blend-difference"
+          />
           <h1 className="text-2xl font-black italic">Foxylib</h1>
         </Link>
         <div className="flex w-max flex-row items-center justify-between gap-4 divide-x-2 divide-solid">
