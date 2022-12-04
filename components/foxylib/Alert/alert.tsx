@@ -7,9 +7,7 @@ export interface AlertProps {
 }
 
 export default function Alert({ show = false }: AlertProps) {
-  console.log(show);
   const [isShow, setIsShow] = useState(show);
-  console.log(isShow);
   return (
     <div
       className={cn(

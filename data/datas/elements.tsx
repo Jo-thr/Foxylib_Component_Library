@@ -16,6 +16,9 @@ import CloseBadge from "raw-loader!@components/elements/Badges/Text/CloseBadge.t
 import { Button } from "@components/elements/Button/button";
 import ButtonText from "raw-loader!@components/elements/Button/buttonText.txt";
 
+import { Collapse } from "@components/elements/Collapse/collapse";
+import FullyCollapse from "raw-loader!@components/elements/Collapse/Text/FullyCollapse.txt";
+
 import { Dropdown } from "@components/elements/Dropdown/dropdown";
 import FullyDropdown from "raw-loader!@components/elements/Dropdown/Text/FullyDropdown.txt";
 import BasicDropdown from "raw-loader!@components/elements/Dropdown/Text/BasicDropdown.txt";
@@ -76,6 +79,53 @@ const elements = [
         preview: <Button children="Ceci est un Bouton" />,
         title: "Button",
         code: ButtonText,
+      },
+    ],
+  },
+  // COLLAPSE
+  {
+    id: 3,
+    name: "Collapse",
+    description:
+      "Est doloribus eum voluptas corrupti temporibus accusamus nisi sequi atque cumque facere! Facere voluptas rem consequatur veritatis voluptatum dolores libero illo enim.",
+    ctaName: "Copy the complete component to the clipboard",
+    cta: FullyCollapse,
+    tabs: true,
+    codes: [
+      {
+        id: 1,
+        preview: (
+          <Collapse
+            title="Question"
+            content="Ceci est une contenu de la question"
+          />
+        ),
+        title: "Simple Collapse",
+        code: FullyCollapse,
+      },
+      {
+        id: 2,
+        preview: <Collapse group={true} />,
+        title: "Multi Collapse",
+        code: FullyCollapse,
+      },
+      {
+        id: 3,
+        preview: <Collapse group={true} iconPosition={"left"} icon={"plus"} />,
+        title: "Collapse with left icon",
+        code: FullyCollapse,
+      },
+      {
+        id: 4,
+        preview: <Collapse group={true} icon={"eye"} />,
+        title: "Collapse with eye icon",
+        code: FullyCollapse,
+      },
+      {
+        id: 5,
+        preview: <Collapse group={true} icon={"plus"} />,
+        title: "Collapse with plus icon",
+        code: FullyCollapse,
       },
     ],
   },

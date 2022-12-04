@@ -23,8 +23,6 @@ export default function Navigation() {
     setTimeout(() => setShowAlert(false), delay * 1000);
   };
 
-  console.log(showAlert);
-
   return (
     <>
       <Metadata title={"Foxylib"} />

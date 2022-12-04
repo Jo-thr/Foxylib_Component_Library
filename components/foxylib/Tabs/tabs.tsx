@@ -80,8 +80,8 @@ export const TabsSection = ({ data, item }: TabProps) => {
           <Tab.Panels>
             {/* PREVIEW CONTENT */}
             <Tab.Panel>
-              <div className="flex max-h-[50vh] min-h-[25vh] w-full min-w-full items-center justify-center rounded-lg border bg-white p-6">
-                <div>{item?.preview}</div>
+              <div className="relative flex max-h-[50vh] min-h-[25vh] w-full min-w-full items-center justify-center rounded-lg border bg-white p-6">
+                {item?.preview}
               </div>
             </Tab.Panel>
             {/* CODE CONTENT */}
