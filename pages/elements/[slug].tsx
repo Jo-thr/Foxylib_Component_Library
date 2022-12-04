@@ -44,7 +44,7 @@ export default function Navigation() {
             <TabsSection key={index} data={data} item={item} />
           ))}
         </div>
-        <Alert show={showAlert} />;
+        <Alert show={showAlert} />
       </DefaultLayout>
     </>
   );

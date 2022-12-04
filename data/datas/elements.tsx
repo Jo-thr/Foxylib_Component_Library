@@ -1,42 +1,55 @@
 //@ts-nocheck
 import { Avatar } from "@components/elements/Avatar/avatar";
-import { Badges } from "@components/elements/Badges/badges";
-import { Button } from "@components/elements/Button/button";
-import { Dropdown } from "@components/elements/Dropdown/dropdown";
+import CircularAvatar from "raw-loader!@components/elements/Avatar/Text/CircularAvatar.txt";
+import FullyAvatar from "raw-loader!@components/elements/Avatar/Text/FullyAvatar.txt";
+import GroupAvatar from "raw-loader!@components/elements/Avatar/Text/GroupAvatar.txt";
+import NotificationAvatar from "raw-loader!@components/elements/Avatar/Text/NotificationAvatar.txt";
+import TextAvatar from "raw-loader!@components/elements/Avatar/Text/TextAvatar.txt";
 
-import AvatarText from "raw-loader!@components/elements/Avatar/avatarText.txt";
-import BadgesText from "raw-loader!@components/elements/Badges/badgesText.txt";
+import { Badges } from "@components/elements/Badges/badges";
+import FullyBadge from "raw-loader!@components/elements/Badges/Text/FullyBadge.txt";
+import CircularBadge from "raw-loader!@components/elements/Badges/Text/CircularBadge.txt";
+import RoundedBadge from "raw-loader!@components/elements/Badges/Text/RoundedBadge.txt";
+import PointBadge from "raw-loader!@components/elements/Badges/Text/PointBadge.txt";
+import CloseBadge from "raw-loader!@components/elements/Badges/Text/CloseBadge.txt";
+
+import { Button } from "@components/elements/Button/button";
 import ButtonText from "raw-loader!@components/elements/Button/buttonText.txt";
-import DropdownText from "raw-loader!@components/elements/Dropdown/dropdownText.txt";
+
+import { Dropdown } from "@components/elements/Dropdown/dropdown";
+import FullyDropdown from "raw-loader!@components/elements/Dropdown/Text/FullyDropdown.txt";
+import BasicDropdown from "raw-loader!@components/elements/Dropdown/Text/BasicDropdown.txt";
+import IconDropdown from "raw-loader!@components/elements/Dropdown/Text/IconDropdown.txt";
 
 const elements = [
+  // AVATAR
   {
     id: 1,
     name: "Avatar",
     description:
       "Dignissimos earum expedita sunt, reprehenderit eveniet ut asperiores ratione repellat ipsam nobis sint minima nostrum ?  Quos eos, veniam odio excepturi porro ex.",
     ctaName: "Copy the complete component to the clipboard",
-    cta: AvatarText,
+    cta: FullyAvatar,
     tabs: true,
     codes: [
       {
         id: 1,
         preview: <Avatar />,
         title: "Circular avatars",
-        code: AvatarText,
+        code: CircularAvatar,
       },
       {
         id: 2,
         preview: <Avatar notif={true} />,
         title: "Avatars with notification",
         // code: String(<Avatar />),
-        code: AvatarText,
+        code: NotificationAvatar,
       },
       {
         id: 3,
         preview: <Avatar group={true} />,
         title: "Avatars Group",
-        code: AvatarText,
+        code: GroupAvatar,
       },
       {
         id: 4,
@@ -44,10 +57,11 @@ const elements = [
           <Avatar title={"Durant Jean"} subtitle={"Développeur Front"} />
         ),
         title: "Avatar with text",
-        code: AvatarText,
+        code: TextAvatar,
       },
     ],
   },
+  // BUTTON
   {
     id: 2,
     name: "Button",
@@ -65,13 +79,14 @@ const elements = [
       },
     ],
   },
+  // DROPDOWN
   {
     id: 4,
     name: "Dropdown",
     description:
       "For this component, the icons, dividers and heading fields are optional. By default, they are in false. If you want them to appear, you just have to activate them. In the examples below, they will all be activated.",
     ctaName: "Copy the complete component to the clipboard",
-    cta: DropdownText,
+    cta: FullyDropdown,
     tabs: true,
     codes: [
       {
@@ -86,7 +101,7 @@ const elements = [
           />
         ),
         title: "Basic dropdown",
-        code: DropdownText,
+        code: BasicDropdown,
       },
       {
         id: 2,
@@ -100,42 +115,43 @@ const elements = [
           />
         ),
         title: "Minimal dropdown",
-        code: DropdownText,
+        code: IconDropdown,
       },
     ],
   },
+  // TAGS
   {
     id: 5,
     name: "Tags",
     description:
       "For this component, the icons, dividers and heading fields are optional. By default, they are in false. If you want them to appear, you just have to activate them. In the examples below, they will all be activated.",
     ctaName: "Copy the complete component to the clipboard",
-    cta: BadgesText,
+    cta: FullyBadge,
     tabs: true,
     codes: [
       {
         id: 1,
         preview: <Badges children="Badge" aspect="circular" />,
         title: "Circular badge",
-        code: BadgesText,
+        code: CircularBadge,
       },
       {
         id: 2,
         preview: <Badges children="Badge" aspect="rounded" />,
         title: "Rounded badge",
-        code: BadgesText,
+        code: RoundedBadge,
       },
       {
         id: 3,
         preview: <Badges point={true} children="Badge" aspect="circular" />,
         title: "Badge with point",
-        code: BadgesText,
+        code: PointBadge,
       },
       {
         id: 4,
         preview: <Badges close={true} children="Badge" aspect="circular" />,
         title: "Badge with close button",
-        code: BadgesText,
+        code: CloseBadge,
       },
     ],
   },

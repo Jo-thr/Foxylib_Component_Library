@@ -2,17 +2,13 @@ import Image from "next/image";
 import cn from "clsx";
 
 export type AvatarContent = {
-  notif?: boolean;
   group?: boolean;
-  title?: string;
-  subtitle?: string;
   form?: "circle" | "rounded" | "square";
 };
 
 export const Avatar = ({
   form = "circle",
-  notif = false,
-  group = false,
+  group = true,
   title,
   subtitle,
 }: AvatarContent) => {

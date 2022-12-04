@@ -1,0 +1,15 @@
+export type BadgesProps = {
+  children: string;
+};
+
+export const Badges = ({
+  children,
+}: BadgesProps) => {
+  return (
+    <div
+      className={"cursor-pointer items-center bg-secondary bg-opacity-70 py-2 px-4 text-sm font-medium uppercase text-white hover:bg-opacity-100 rounded-lg"} 
+    >
+      {children}
+    </div>
+  );
+};
