@@ -6,7 +6,6 @@ import Link from "next/link";
 
 export default function Elements() {
   const data = useTranslation().data.elements;
-  console.log(data);
   return (
     <>
       <Metadata title={"Foxylib"} />
@@ -26,7 +25,9 @@ export default function Elements() {
 
               <Link href={"/elements/" + item.name.toLocaleLowerCase()}>
                 <div className="flex flex-row items-center justify-between rounded-b-lg border border-transparent p-4 group-hover:border-primary">
-                  <div className="font-semibold text-primary ">{item.name}</div>
+                  <div className="font-semibold group-hover:text-primary">
+                    {item.name}
+                  </div>
                   <Button aspect="circular" children={"voir"} />
                 </div>
               </Link>
