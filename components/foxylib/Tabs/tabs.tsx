@@ -43,7 +43,7 @@ export const TabsSection = ({ data, item }: TabProps) => {
                     className={cn(
                       `flex flex-row items-center px-4 py-2 text-xs text-gray-500 outline-none ${
                         tab.name === activeTab &&
-                        "rounded-lg bg-secondary !text-white "
+                        "rounded-lg bg-primary !text-white "
                       }`
                     )}
                   >
@@ -59,7 +59,7 @@ export const TabsSection = ({ data, item }: TabProps) => {
                 <div
                   className={cn(
                     `mr-2 text-sm transition duration-500 ease-in-out ${
-                      clicked === true ? "text-secondary" : "text-gray-900"
+                      clicked === true ? "text-primary" : "text-gray-900"
                     } `
                   )}
                 >

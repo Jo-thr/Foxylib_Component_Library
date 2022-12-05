@@ -24,7 +24,7 @@ export const Sidebar = ({ data }: SidebarProps) => {
                 className={cn(`flex flex-col items-start border-l-4 border-transparent text-sm font-medium
                 ${
                   router.asPath.includes(item.path) &&
-                  "rounded-lg bg-secondary text-white"
+                  "rounded-lg bg-primary text-white"
                 }
                 `)}
               >
@@ -40,7 +40,7 @@ export const Sidebar = ({ data }: SidebarProps) => {
                       key={sub.id}
                       href={sub.path}
                       className={cn(`-ml-1 border-l-4 p-2 text-sm font-medium first:pt-4
-                  ${router.asPath === sub.path && "border-l-4 border-secondary"}
+                  ${router.asPath === sub.path && "border-l-4 border-primary"}
                   `)}
                     >
                       {sub.name}

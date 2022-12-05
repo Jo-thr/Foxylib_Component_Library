@@ -83,7 +83,7 @@ export const Dropdown = ({
           `relative top-0 inline-flex w-max items-center justify-center px-4 py-2 text-sm font-medium 
           ${
             aspect === "basic" &&
-            "rounded-md bg-secondary bg-opacity-60 text-white hover:bg-opacity-90 "
+            "rounded-md bg-primary bg-opacity-60 text-white hover:bg-opacity-90 "
           }`
         )}
       >
@@ -116,13 +116,13 @@ export const Dropdown = ({
               {index === 0 && heading && (
                 <div className="flex flex-col px-2 py-3 pt-1 text-sm">
                   Signed in as
-                  <span className="font-bold text-secondary">
+                  <span className="font-bold text-primary">
                     foxylib@contact.com
                   </span>
                 </div>
               )}
               <Link
-                className="flex w-full items-center rounded-md  p-2 text-sm hover:bg-secondary hover:text-white"
+                className="flex w-full items-center rounded-md  p-2 text-sm hover:bg-primary hover:text-white"
                 href={item.path}
               >
                 {icon === true && <>{item.icon}</>}
