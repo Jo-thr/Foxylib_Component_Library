@@ -29,12 +29,12 @@ export default function Navigation() {
     <>
       <Metadata title={"Foxylib"} />
       <DefaultLayout>
-        <h1 className="mb-6 border-b-2  border-secondary pr-6 pb-4 text-3xl font-bold capitalize">
+        <h1 className="mb-6 border-b-2  border-primary pr-6 pb-4 text-3xl font-bold capitalize">
           {data[0]?.name}
         </h1>
         <p className="mb-4 w-full text-sm">{data[0]?.description}</p>
         <button
-          className="mb-14 rounded-full bg-secondary px-3 py-2 text-xs text-white"
+          className="mb-14 rounded-full bg-primary px-3 py-2 text-xs text-white"
           onClick={handleClicked}
         >
           {data[0]?.ctaName}

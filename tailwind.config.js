@@ -1,8 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 
 const THEME_COLORS = {
-  primary: "#FD9C32",
-  secondary: '#0123FF',
+  primary: '#0123FF',
 }
 
 module.exports = {

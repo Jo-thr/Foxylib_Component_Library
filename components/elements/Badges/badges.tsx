@@ -17,7 +17,7 @@ export const Badges = ({
   return (
     <div
       className={cn(
-        `flex cursor-pointer items-center bg-secondary bg-opacity-70 py-2 px-4 text-sm font-medium uppercase text-white hover:bg-opacity-100 ${
+        `flex cursor-pointer items-center bg-primary bg-opacity-70 py-2 px-4 text-sm font-medium uppercase text-white hover:bg-opacity-100 ${
           aspect === "circular" && "rounded-full"
         } ${aspect === "rounded" && "rounded-lg"}`
       )}
