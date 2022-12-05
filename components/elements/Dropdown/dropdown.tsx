@@ -75,7 +75,7 @@ export const Dropdown = ({
   ];
 
   return (
-    <div className="relative w-full">
+    <div className="relative flex w-full justify-center">
       <button
         onClick={() => setClicked(!clicked)}
         className={cn(
@@ -102,7 +102,7 @@ export const Dropdown = ({
       </button>
       <div
         className={cn(
-          `top-10 right-0 z-10 h-max w-60 origin-top-right rounded-xl border border-gray-50 bg-white py-3 px-2 shadow-lg transition duration-700 ease-in-out ${
+          `top-10 z-10 h-max w-60 origin-top-right rounded-xl border border-gray-50 bg-white py-3 px-2 shadow-lg transition duration-700 ease-in-out ${
             clicked === false ? "hidden" : "absolute"
           }`
         )}

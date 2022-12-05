@@ -77,7 +77,37 @@ const elements = [
       {
         id: 1,
         preview: <Button children="Ceci est un Bouton" />,
-        title: "Button",
+        title: "Primary Button",
+        code: ButtonText,
+      },
+      {
+        id: 2,
+        preview: <Button children="Ceci est un Bouton" color="white" />,
+        title: "White Button",
+        code: ButtonText,
+      },
+      {
+        id: 3,
+        preview: <Button children="Ceci est un Bouton" icon="left" />,
+        title: "Button with leading icon",
+        code: ButtonText,
+      },
+      {
+        id: 4,
+        preview: <Button children="Ceci est un Bouton" icon="right" />,
+        title: "Button with trailing icon",
+        code: ButtonText,
+      },
+      {
+        id: 5,
+        preview: <Button children="Ceci est un Bouton" aspect="rounded" />,
+        title: "Round Button",
+        code: ButtonText,
+      },
+      {
+        id: 6,
+        preview: <Button children="+" aspect="circular" />,
+        title: "Minimal Button",
         code: ButtonText,
       },
     ],
