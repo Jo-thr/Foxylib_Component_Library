@@ -1,3 +1,4 @@
+//@ts-nocheck
 import useTranslation from "@hooks/useTranslation";
 import { useState } from "react";
 import { Tab } from "@headlessui/react";
@@ -95,11 +96,47 @@ export const TabsSection = ({ data, item }: TabProps) => {
           </Tab.Panels>
         </Tab.Group>
       ) : (
-        <div className="relative max-h-[50vh] w-full !max-w-full overflow-hidden rounded-lg  bg-gray-800 p-8 text-sm text-gray-200">
-          <pre className="overflow-auto whitespace-pre-wrap ">
-            <code>{item?.code}</code>
-          </pre>
-        </div>
+        <>
+          <div
+            className={
+              "mb-2 flex w-full items-center justify-between rounded-lg"
+            }
+          >
+            <div>
+              <h4 className="font-bold">{item?.title}</h4>
+            </div>
+            <div className="flex flex-row items-center">
+              <button
+                className="flex items-center px-5"
+                onClick={handleClicked}
+              >
+                <div
+                  className={cn(
+                    `mr-2 text-sm transition duration-500 ease-in-out ${
+                      clicked === true ? "text-primary" : "text-gray-900"
+                    } `
+                  )}
+                >
+                  {clicked === false ? (
+                    <div className="flex flex-row items-center">
+                      Copy <DocumentIcon className="ml-2 h-5 w-5 stroke-2 " />
+                    </div>
+                  ) : (
+                    <div className="flex flex-row items-center">
+                      Copied{" "}
+                      <DocumentCheckIcon className="ml-2 h-5 w-5 stroke-2 " />
+                    </div>
+                  )}
+                </div>
+              </button>
+            </div>
+          </div>
+          <div className="relative max-h-[50vh] w-full !max-w-full overflow-hidden rounded-lg  bg-gray-800 p-8 text-sm text-gray-200">
+            <pre className="overflow-auto whitespace-pre-wrap ">
+              <code>{data?.code}</code>
+            </pre>
+          </div>
+        </>
       )}
     </div>
   );

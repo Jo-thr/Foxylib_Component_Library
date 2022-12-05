@@ -7,9 +7,18 @@ const hooks = [
     name: "Translation",
     description:
       "Dignissimos earum expedita sunt, reprehenderit eveniet ut asperiores ratione repellat ipsam nobis sint minima nostrum ?  Quos eos, veniam odio excepturi porro ex.",
-    preview: <Translations />,
+    preview: "Translation",
+    ctaName: "Copy the complete component to the clipboard",
+    cta: "",
     tabs: false,
-    code: "@components/hooks/translationsTxt",
+    codes: [
+      {
+        id: 1,
+        preview: "",
+        title: "Translation",
+        code: "CircularAvatar",
+      },
+    ],
   },
 ];
 
