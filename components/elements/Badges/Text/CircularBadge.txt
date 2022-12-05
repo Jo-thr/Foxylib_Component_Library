@@ -7,7 +7,7 @@ export const Badges = ({
 }: BadgesProps) => {
   return (
     <div
-      className={"cursor-pointer items-center bg-secondary bg-opacity-70 py-2 px-4 text-sm font-medium uppercase text-white hover:bg-opacity-100 rounded-full"} 
+      className={"cursor-pointer items-center bg-primary bg-opacity-70 py-2 px-4 text-sm font-medium uppercase text-white hover:bg-opacity-100 rounded-full"} 
     >
       {children}
     </div>

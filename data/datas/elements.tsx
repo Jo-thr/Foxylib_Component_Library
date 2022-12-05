@@ -32,6 +32,7 @@ const elements = [
     description:
       "Dignissimos earum expedita sunt, reprehenderit eveniet ut asperiores ratione repellat ipsam nobis sint minima nostrum ?  Quos eos, veniam odio excepturi porro ex.",
     ctaName: "Copy the complete component to the clipboard",
+    preview: <Avatar />,
     cta: FullyAvatar,
     tabs: true,
     codes: [
@@ -71,6 +72,7 @@ const elements = [
     description:
       "Est doloribus eum voluptas corrupti temporibus accusamus nisi sequi atque cumque facere! Facere voluptas rem consequatur veritatis voluptatum dolores libero illo enim.",
     ctaName: "Copy the complete component to the clipboard",
+    preview: <Button children="Ceci est un Bouton" />,
     cta: ButtonText,
     tabs: true,
     codes: [
@@ -119,6 +121,12 @@ const elements = [
     description:
       "Est doloribus eum voluptas corrupti temporibus accusamus nisi sequi atque cumque facere! Facere voluptas rem consequatur veritatis voluptatum dolores libero illo enim.",
     ctaName: "Copy the complete component to the clipboard",
+    preview: (
+      <Collapse
+        title="Question"
+        content="Ceci est une contenu de la question"
+      />
+    ),
     cta: FullyCollapse,
     tabs: true,
     codes: [
@@ -166,6 +174,15 @@ const elements = [
     description:
       "For this component, the icons, dividers and heading fields are optional. By default, they are in false. If you want them to appear, you just have to activate them. In the examples below, they will all be activated.",
     ctaName: "Copy the complete component to the clipboard",
+    preview: (
+      <Dropdown
+        children="Option"
+        icon={true}
+        divider={true}
+        heading={true}
+        aspect={"basic"}
+      />
+    ),
     cta: FullyDropdown,
     tabs: true,
     codes: [
@@ -206,6 +223,7 @@ const elements = [
     description:
       "For this component, the icons, dividers and heading fields are optional. By default, they are in false. If you want them to appear, you just have to activate them. In the examples below, they will all be activated.",
     ctaName: "Copy the complete component to the clipboard",
+    preview: <Badges children="Badge" aspect="circular" />,
     cta: FullyBadge,
     tabs: true,
     codes: [

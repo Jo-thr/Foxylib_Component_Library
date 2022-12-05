@@ -35,7 +35,7 @@ export const Avatar = ({
       {title && (
         <div className="ml-4 flex flex-col">
           <span className="font-bold">{title}</span>
-          <span className="text-sm text-secondary">{subtitle}</span>
+          <span className="text-sm text-primary">{subtitle}</span>
         </div>
       )}
     </div>

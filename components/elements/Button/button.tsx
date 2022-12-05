@@ -24,11 +24,11 @@ export const Button = ({
       >
         <div
           className={cn(
-            `relative z-10 flex flex-row items-center gap-4 px-4 py-[0.6rem] text-sm font-semibold uppercase 
+            `relative z-10 flex flex-row items-center gap-4 px-4 py-[0.6rem] text-xs font-semibold 
             ${
               color === "white"
-                ? "border border-secondary bg-white text-secondary"
-                : "bg-secondary text-white"
+                ? "border border-primary bg-white text-primary"
+                : "bg-primary text-white"
             }
             ${aspect === "rounded" && "rounded-lg"}
             ${aspect === "normal" && "rounded-none"}

@@ -16,6 +16,9 @@ module.exports = {
       colors: {
         ...THEME_COLORS,
       },
+      boxShadow: {
+        blur: '0px 0px 15px 0px rgba(0,0,0,0.10)',
+      },
     },
   },
   plugins: [],
