@@ -1,4 +1,5 @@
 //@ts-nocheck
+import { Toggle } from "@components/forms/Toggle/Toggle";
 import CircularAvatar from "raw-loader!@components/elements/Avatar/Text/CircularAvatar.txt";
 import FullyAvatar from "raw-loader!@components/elements/Avatar/Text/FullyAvatar.txt";
 
@@ -111,14 +112,26 @@ const forms = [
     description:
       "For this component, the icons, dividers and heading fields are optional. By default, they are in false. If you want them to appear, you just have to activate them. In the examples below, they will all be activated.",
     ctaName: "Copy the complete component to the clipboard",
-    preview: "",
+    preview: <Toggle />,
     cta: FullyBadge,
     tabs: true,
     codes: [
       {
         id: 1,
-        preview: "",
-        title: "Toggle",
+        preview: <Toggle />,
+        title: "Simple Toggle",
+        code: ButtonText,
+      },
+      {
+        id: 2,
+        preview: <Toggle aspect={"short"} />,
+        title: "Short Toggle",
+        code: ButtonText,
+      },
+      {
+        id: 3,
+        preview: <Toggle aspect={"short"} icon={true} />,
+        title: "Toggle with Icon",
         code: ButtonText,
       },
     ],
