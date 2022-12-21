@@ -1,4 +1,5 @@
 //@ts-nocheck
+import { Select } from "@components/forms/Select/Select";
 import { Toggle } from "@components/forms/Toggle/Toggle";
 import CircularAvatar from "raw-loader!@components/elements/Avatar/Text/CircularAvatar.txt";
 import FullyAvatar from "raw-loader!@components/elements/Avatar/Text/FullyAvatar.txt";
@@ -91,16 +92,34 @@ const forms = [
     id: 5,
     name: "Select",
     description:
-      "For this component, the icons, dividers and heading fields are optional. By default, they are in false. If you want them to appear, you just have to activate them. In the examples below, they will all be activated.",
+      "For this component, the check icon, status and avatar are optional. By default, they are in false. If you want them to appear, you just have to activate them. In the examples below, they will all be activated.",
     ctaName: "Copy the complete component to the clipboard",
-    preview: "",
+    preview: <Select check={true} status={true} avatar={true} />,
     cta: FullyBadge,
     tabs: true,
     codes: [
       {
         id: 1,
-        preview: "",
-        title: "Select",
+        preview: <Select />,
+        title: "Simple Select",
+        code: ButtonText,
+      },
+      {
+        id: 2,
+        preview: <Select check={true} />,
+        title: "With check icon",
+        code: ButtonText,
+      },
+      {
+        id: 3,
+        preview: <Select status={true} />,
+        title: "With status",
+        code: ButtonText,
+      },
+      {
+        id: 4,
+        preview: <Select avatar={true} />,
+        title: "With avatar",
         code: ButtonText,
       },
     ],
