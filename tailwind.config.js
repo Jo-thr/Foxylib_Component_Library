@@ -1,8 +1,8 @@
 /** @type {import('tailwindcss').Config} */
 
 const THEME_COLORS = {
-  primary: '#0123FF',
-}
+  primary: "#0123FF",
+};
 
 module.exports = {
   content: [
@@ -17,9 +17,9 @@ module.exports = {
         ...THEME_COLORS,
       },
       boxShadow: {
-        blur: '0px 0px 15px 0px rgba(0,0,0,0.10)',
+        blur: "0px 0px 15px 0px rgba(0,0,0,0.10)",
       },
     },
   },
-  plugins: [],
-}
+  plugins: [require("@tailwindcss/forms")],
+};
