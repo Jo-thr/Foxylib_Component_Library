@@ -1,11 +1,15 @@
 // @ts-nocheck
 import Alert from "@components/foxylib/Alert/alert";
+import { BrowserView } from "@components/foxylib/BrowserView/BrowserView";
 import { TabsSection } from "@components/foxylib/Tabs/tabs";
-import { DefaultLayout } from "@components/layout/DefaultLayout";
+import { DefaultLayout, LeftSide, RightSide } from "@components/layout/DefaultLayout";
 import useTranslation from "@hooks/useTranslation";
 import { Metadata } from "helpers/Metadata";
+import Image from "next/image";
 import { useRouter } from "next/router";
 import { useState } from "react";
+import imageUrl from '@public/adrian-infernus-GLf7bAwCdYg-unsplash.jpg';
+import { DarkBrowserView } from "@components/foxylib/BrowserView/DarkBrowserView";
 
 export default function Navigation() {
   const slug = useRouter().query.slug;
@@ -23,10 +27,11 @@ export default function Navigation() {
     setTimeout(() => setShowAlert(false), delay * 1000);
   };
 
+  console.log(data);
   return (
     <>
       <Metadata title={"Foxylib"} />
-      <DefaultLayout>
+      {/* <DefaultLayout>
         <h1 className="mb-6 border-b-2  border-primary pr-6 pb-4 text-3xl font-bold capitalize">
           {data[0]?.name}
         </h1>
@@ -43,6 +48,19 @@ export default function Navigation() {
           ))}
         </div>
         <Alert show={showAlert} />
+      </DefaultLayout> */}
+      <DefaultLayout>
+        <LeftSide>
+          {data[0].preview}
+        </LeftSide>
+
+        <RightSide className="gap-10">
+          <h1 className="border-b-2  border-primary pr-6 pb-4 text-3xl font-bold capitalize">
+          {data[0]?.name}
+        </h1>
+        <p className="w-full text-sm px-10">{data[0]?.description}</p>
+          <DarkBrowserView>{data[0].codes[0].code}</DarkBrowserView>
+        </RightSide>
       </DefaultLayout>
     </>
   );

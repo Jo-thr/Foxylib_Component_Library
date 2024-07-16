@@ -1,10 +1,10 @@
 //@ts-nocheck
-import useTranslation from "@hooks/useTranslation";
-import { useState } from "react";
-import { Tab } from "@headlessui/react";
-import cn from "clsx";
-import React from "react";
-import { DocumentCheckIcon, DocumentIcon } from "@heroicons/react/24/outline";
+import useTranslation from '@hooks/useTranslation';
+import { useState } from 'react';
+import { Tab } from '@headlessui/react';
+import cn from 'clsx';
+import React from 'react';
+import { DocumentCheckIcon, DocumentIcon } from '@heroicons/react/24/outline';
 export interface TabProps {
   data: Array<Record<string, any>>;
   item: Record<string, any>;
@@ -29,7 +29,7 @@ export const TabsSection = ({ data, item }: TabProps) => {
         <Tab.Group>
           <Tab.List
             className={
-              "mb-2 flex w-full items-center justify-between rounded-lg"
+              'mb-2 flex w-full items-center justify-between rounded-lg'
             }
           >
             <div>
@@ -44,7 +44,7 @@ export const TabsSection = ({ data, item }: TabProps) => {
                     className={cn(
                       `flex flex-row items-center px-4 py-2 text-xs text-gray-500 outline-none ${
                         tab.name === activeTab &&
-                        "rounded-lg bg-primary !text-white "
+                        'rounded-lg bg-primary !text-white '
                       }`
                     )}
                   >
@@ -60,7 +60,7 @@ export const TabsSection = ({ data, item }: TabProps) => {
                 <div
                   className={cn(
                     `mr-2 text-sm transition duration-500 ease-in-out ${
-                      clicked === true ? "text-primary" : "text-gray-900"
+                      clicked === true ? 'text-primary' : 'text-gray-900'
                     } `
                   )}
                 >
@@ -70,7 +70,7 @@ export const TabsSection = ({ data, item }: TabProps) => {
                     </div>
                   ) : (
                     <div className="flex flex-row items-center">
-                      Copied{" "}
+                      Copied{' '}
                       <DocumentCheckIcon className="ml-2 h-5 w-5 stroke-2 " />
                     </div>
                   )}
@@ -99,7 +99,7 @@ export const TabsSection = ({ data, item }: TabProps) => {
         <>
           <div
             className={
-              "mb-2 flex w-full items-center justify-between rounded-lg"
+              'mb-2 flex w-full items-center justify-between rounded-lg'
             }
           >
             <div>
@@ -113,7 +113,7 @@ export const TabsSection = ({ data, item }: TabProps) => {
                 <div
                   className={cn(
                     `mr-2 text-sm transition duration-500 ease-in-out ${
-                      clicked === true ? "text-primary" : "text-gray-900"
+                      clicked === true ? 'text-primary' : 'text-gray-900'
                     } `
                   )}
                 >
@@ -123,7 +123,7 @@ export const TabsSection = ({ data, item }: TabProps) => {
                     </div>
                   ) : (
                     <div className="flex flex-row items-center">
-                      Copied{" "}
+                      Copied{' '}
                       <DocumentCheckIcon className="ml-2 h-5 w-5 stroke-2 " />
                     </div>
                   )}
