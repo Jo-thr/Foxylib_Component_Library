@@ -1,6 +1,7 @@
 
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": ["Config Renovate Foxylib — PRs groupées le lundi matin"],
   "extends": ["config:recommended"],
   "timezone": "Europe/Paris",
   "schedule": ["* 6-12 * * 1"],
